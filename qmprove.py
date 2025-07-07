@@ -43,12 +43,17 @@ for xi in range(width):
     wave2 = np.sin(k * r2) / r2
 
     intensity[xi] = (wave1 + wave2)**2
+
+# Normalize
 intensity /= intensity.max()
+
+# Plot
 fig, ax = plt.subplots(figsize=(10, 4))
-ax.plot(x, intensity, color='blue')
+ax.plot(x * 1e3, intensity, color='blue')  # convert x to mm for display
 ax.set_title("Interference Pattern on Screen")
-ax.set_xlabel("Position on Screen")
+ax.set_xlabel("Position on Screen (mm)")
 ax.set_ylabel("Normalized Intensity")
 ax.grid(True)
 st.pyplot(fig)
-st.caption("Based on Wilson–Sommerfeld wave quantization and classical interference principles.")
+
+st.caption("Simulation based on classical wave interference and quantum amplitude superposition.")
