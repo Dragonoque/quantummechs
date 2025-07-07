@@ -2,9 +2,9 @@ import streamlit as st
 import numpy as np
 import matplotlib.pyplot as plt
 
-st.title("🧪 Double-Slit Interference Simulation")
+st.title(" Double-Slit Interference Simulation")
 st.write("Simulates the interference pattern of particles like electrons in a quantum double-slit experiment.")
-st.subheader("📘 Interference Equations")
+st.subheader(" Interference Equations")
 st.latex(r"""
 k = \frac{2\pi}{\lambda} \quad \text{(wave number)}
 """)
